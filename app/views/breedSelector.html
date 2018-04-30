@@ -1,0 +1,302 @@
+<div class="breedSelector-container">
+	
+	<div class="container-fluid" >
+		<div class= "col-md-12 spacing">
+		</div>
+		<div class= "col-md-12 spacing">
+		</div>
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-5">
+			<div class="form-container">
+			    <form name="multiStepForm" class="form-validation" role="form" novalidate>
+			      <div class="animate-switch-container" ng-switch on="stage" ng-class="{forward: direction, backward:!direction}">
+			        <div class="animate-switch" ng-switch-default>
+			          <div class="row">
+			            <div class="col-md-12">
+			              <p>Welcome to dog matcher! If you’re looking for information or resources on a dog or puppy, you’ve come to the right place. Here, you can use our matchup tool to find out which types of breeds and mixes may be a good fit for you and your family – and then browse our detailed dog breed profiles.</p>
+			              <button type="button" class="btn btn-primary" ng-click="next('stage1')">Start</button>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="animate-switch" ng-switch-when="stage1">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">1. What size dog are you interested in?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="size" ng-model="formParams.size" value="4-5">
+								I prefer large dogs
+							</label><br/>
+							<label>
+								<input type="radio" name="size" ng-model="formParams.size" value="3-5">
+								I prefer medium or large
+							</label><br/>
+							<label>
+								<input type="radio" name="size" ng-model="formParams.size" value="2-4">
+								I prefer medium dogs
+							</label><br/>
+							<label>
+								<input type="radio" name="size" ng-model="formParams.size" value="1-3">
+								I prefer small or medium
+							</label><br/>
+							<label>
+								<input type="radio" name="size" ng-model="formParams.size" value="0-2">
+								I prefer small dogs
+							</label><br/>
+							<label>
+								<input type="radio" name="size" ng-model="formParams.size" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('size'); back('')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('size');next('stage2')">Next</button>
+			        </div>
+
+			        <div class="animate-switch" ng-switch-when="stage2">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">2. How energetic do you want your new dog to be?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="energy" ng-model="formParams.energy" value="2-5">
+								A sprinter
+							</label><br/>
+							<label>
+								<input type="radio" name="energy" ng-model="formParams.energy" value="1-4">
+								A jogger
+							</label><br/>
+							<label>
+								<input type="radio" name="energy" ng-model="formParams.energy" value="0-2">
+								A couch potato
+							</label><br/>
+							<label>
+								<input type="radio" name="energy" ng-model="formParams.energy" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('energy'); back('stage1')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('energy');next('stage3')">Next</button>
+			        </div>
+
+			        <div class="animate-switch" ng-switch-when="stage3">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">3. How trainable would you like your dog to be?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="trainability" ng-model="formParams.trainability" value="3-5">
+								Very trainable. I plan to teach him all the basic commands, plus a lot of fun tricks
+							</label><br/>
+							<label>
+								<input type="radio" name="trainability" ng-model="formParams.trainability" value="2-5">
+								Fairly trainable. He needs to know all the basic commands
+							</label><br/>
+							<label>
+								<input type="radio" name="trainability" ng-model="formParams.trainability" value="0-5">
+								Not very trainable. I have a laid-back approach to rules and commands
+							</label><br/>
+							<label>
+								<input type="radio" name="trainability" ng-model="formParams.trainability" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('trainability'); back('stage2')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('trainability'); next('stage4')">Next</button>
+			        </div>
+
+			        <div class="animate-switch" ng-switch-when="stage4">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">4. How much maintenance and grooming are you able to provide for your dog?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="grooming" ng-model="formParams.grooming" value="3-5">
+								I am able to groom my dog 5 - 7 times a week as well as frequent the groomer
+							</label><br/>
+							<label>
+								<input type="radio" name="grooming" ng-model="formParams.grooming" value="2-5">
+								I am able to groom my dog 3 - 5 times a week with the occasional visit to a groomer
+							</label><br/>
+							<label>
+								<input type="radio" name="grooming" ng-model="formParams.grooming" value="0-5">
+								I want a dog that's as low maintenance as possible
+							</label><br/>
+							<label>
+								<input type="radio" name="grooming" ng-model="formParams.grooming" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('grooming'); back('stage3')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('grooming'); next('stage5')">Next</button>
+			        </div>
+
+			        <div class="animate-switch" ng-switch-when="stage5">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">5. How often will you be able to play with your dog?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="playfulness" ng-model="formParams.playfulness" value="3-5">
+								All day
+							</label><br/>
+							<label>
+								<input type="radio" name="playfulness" ng-model="formParams.playfulness" value="1-5">
+								A few times a day
+							</label><br/>
+							<label>
+								<input type="radio" name="playfulness" ng-model="formParams.playfulness" value="0-4">
+								Maybe once a day
+							</label><br/>
+							<label>
+								<input type="radio" name="playfulness" ng-model="formParams.playfulness" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('playfulness'); back('stage4')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('playfulness'); next('stage6')">Next</button>
+			        </div>
+
+			        <div class="animate-switch" ng-switch-when="stage6">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">6. How smart would you like your dog to be?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="intelligence" ng-model="formParams.intelligence" value="2-5">
+								Smart enough to keep me on my toes
+							</label><br/>
+							<label>
+								<input type="radio" name="intelligence" ng-model="formParams.intelligence" value="1-4">
+								Responsive, but no smarter than I am!
+							</label><br/>
+							<label>
+								<input type="radio" name="intelligence" ng-model="formParams.intelligence" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('intelligence'); back('stage5')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('intelligence'); next('stage7')">Next</button>
+			        </div>
+
+			        <div class="animate-switch" ng-switch-when="stage7">
+			          <div class="row">
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			              <div class="form-group">
+			                <label for="tb-fname">7. How friendly would you like your dog to be?</label>
+			                <br/>
+			                <hr/>
+			                <label>
+								<input type="radio" name="friendliness" ng-model="formParams.friendliness" value="4-5">
+								Extremly friendly
+							</label><br/>
+							<label>
+								<input type="radio" name="friendliness" ng-model="formParams.friendliness" value="3-5">
+								Friendly
+							</label><br/>
+							<label>
+								<input type="radio" name="friendliness" ng-model="formParams.friendliness" value="0-5">
+								Not friendly
+							</label><br/>
+							<label>
+								<input type="radio" name="friendliness" ng-model="formParams.friendliness" value="0">
+								Not important
+							</label><br/>
+			               </div>
+			            </div>
+			          </div>
+			          <button type="button" class="btn btn-info" ng-click="filterResults('friendliness'); back('stage6')">Back</button>
+			          <button type="button" class="btn btn-primary" ng-click="filterResults('friendliness'); next('stage8')">Next</button>
+			        </div>
+
+			       
+
+			        <div class="animate-switch" ng-switch-when="stage8">
+						<div class="row">
+				            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              <div class="form-group">
+				                <label for="tb-email">Name:</label>
+				                <input type="text" class="form-control" id="tb-name" name="name" ng-maxlength="100" ng-model="formParams.name"  ng-model-options="{ updateOn: 'blur' }" required>
+				              </div>
+				            </div>
+				         </div>
+
+			        	<div class="row">
+				            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              <div class="form-group">
+				                <label for="tb-email">Email:</label>
+				                <input type="email" class="form-control" id="tb-email" name="email" ng-maxlength="100" ng-model="formParams.email" ng-class="{'input-error': formValidation && multiStepForm.email.$error.required}" ng-model-options="{ updateOn: 'blur' }" required>
+				                <span ng-show="multiStepForm.email.$error.email">
+				                  Incorrect email format.
+				                </span>
+				                <span ng-show="multiStepForm.email.$error.maxlength">
+				                  Max character length reached.
+				                </span>
+				              </div>
+				            </div>
+				          </div>
+			          
+			         
+			          <button type="button" class="btn btn-info" ng-click="back('stage7')">Back</button>
+			          <button type="button" class="btn btn-warning" ng-click="submitForm()">Submit</button>
+			        </div>
+			        <div class="animate-switch" ng-switch-when="success">
+			          <div class="success-wrap">
+			            <h2 class="confirmation-text">Thank you</h2>
+			            <p>Your message has been sent.<br>You should receive a confirmation email.</p>
+			            <div><button type="button" class="btn btn-success" ng-click="reset()" >Send Another</button></div>
+			          </div>
+			        </div>
+			        <div class="animate-switch" ng-switch-when="error" >
+			          <div class="error-wrap">
+			            <h2 class="confirmation-text">Error</h2>
+			            <p>There was an error when attempting to submit your request.<br>Please try again later.</p>
+			            <p><strong>*This will always error until a web service URL is set.*</strong></p>
+			            <div><button type="button" class="btn btn-danger" ng-click="reset()" >Try again</button></div>
+			          </div>
+			        </div>
+			      </div>
+			    </form>
+			    
+			   
+			   
+			  </div>
+			  <div class= "col-md-12 spacing">
+				</div>
+		</div>
+			
+		<div class="col-md-5 breed-desc-div" /*style="overflow: hidden;padding-left: 0px;"*/>
+			<div class="overflow-y-div" /*style="width:106%"*/>
+				<div class="col-md-6" ng-repeat="tile in resultTileArray">
+					<dog-tile breed-info="tile"></dog-tile>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+

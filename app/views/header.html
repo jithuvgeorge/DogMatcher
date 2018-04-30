@@ -1,0 +1,16 @@
+<header class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 header-cnt">
+      <span class="back-btn" ng-show="{{showHomeButon}}" ng-click= "goToHome()">
+        <img ng-src="./images/Back.png"/>
+      </span>
+      <span class="header-txt">{{searchText}}</span>
+      <span class="search-btn col-xs-12">
+        <img ng-src="./images/search.png"/>
+      </span>
+      <span class="searchBox">
+          <input type="text" ng-model="customSelected" placeholder="Search" uib-typeahead="dog as dog.name for dog in searchDogs($viewValue)" typeahead-template-url="searchResultTemplate.html" class="form-control" typeahead-min-length="1" typeahead-on-select= "goToBreed(customSelected);">
+      </span>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,54 @@
+<div class= "col-md-12 col-sm-6">
+	<dl class="dl-horizontal breed-desc-div">
+		<dt>Wieght:</dt>
+		<dd>{{dog.min_weight}} - {{dog.max_weight}} lb</dd>
+		<dt>Lenght:</dt>
+		<dd>{{dog.min_length}} - {{dog.max_length}} in</dd>
+		<dt>Lifespan:</dt>
+		<dd>{{dog.life_span}}</dd>
+		<dt>Trainability:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.trainability" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Intelligence:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.intelligence" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Size:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.size" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Grooming:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.grooming" data-readonly="true" max="5"/span>
+		</dd>
+		<dt>Frienddiness:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.friendliness" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Adaptability:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.adaptability" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Energy:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.energy" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Tolerance being alone:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.alone_tolerance" data-readonly="true" max="5" ></span>
+		</dd>
+		<dt>Playfulness:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.playfulness" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Bark Tendency:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.bark_tendency" data-readonly="true" max="5"></span>
+		</dd>
+		<dt>Prey Drive:</dt>
+		<dd>
+			<span uib-rating ng-model="dog.dogCharacteristics.prey_drive" data-readonly="true" max="5"></span>
+		</dd>
+	</dl>
+</div>

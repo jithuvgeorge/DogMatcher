@@ -1,0 +1,358 @@
+body{
+  color: white;
+}
+
+.logoDiv{
+  z-index: 100;
+  height: 48px;
+  width: 65px;
+  position: absolute;
+  top: 0px;
+  background: url(../images/dogmatcher_logo_black.PNG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  left: 0px;
+}
+
+.breedSelector-container{
+  padding: 50px 5px 5px;
+  background: url("../images/background3.jpg");
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-color: #ccc;
+  min-height: 100vh;
+  height: 100%;
+  background-size: cover;
+}
+
+.home-container{
+  padding: 70px 5px 5px;
+  height: 100vh;  
+}
+
+.heading1{
+  font-family: 'Alegreya Sans SC';
+  font-weight: 600;
+  background: #ffffff;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+
+.animDiv{
+  background: url("../images/homePageBackground.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  background-color: #fefcfe;
+  text-align: center;
+}
+
+.breed-container{
+  padding: 50px 5px 5px;
+  background: url("../images/background3.jpg");
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-color: #ccc;
+  min-height: 100vh;
+  height: 100%;
+  background-size: cover;
+}
+
+.overlayDiv{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  opacity: .3;
+  background-color: #f5f5f5;
+}
+
+.spacing{
+  height: 4vh;
+}
+
+@media screen and (min-width: 990px) {
+  .show-in-mobile-content { display: none; }  /* show it on small screens */
+}
+
+@media screen and  (max-width: 990px) {
+  .show-in-mobile-content { display: block; }   /* hide it elsewhere */
+}
+
+@media screen and (min-width: 990px) {
+  .hide-in-mobile-content { display: block; }  /* show it on small screens */
+}
+
+@media screen and  (max-width: 990px) {
+  .hide-in-mobile-content { display: none; }   /* hide it elsewhere */
+}
+
+.overflow-y-div{
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.padding-top-10p{
+  padding-top: 10%;
+}
+
+ .carousel-inner > .item > img{
+    height: 33vh;
+    width: 100vw;
+    border-radius: 12px;
+ }
+
+ .glyphicon-star{
+    color: gold;
+ }
+
+ .carousel-control{
+    border-radius: 12px;
+ }
+
+ .breed-desc-div{
+    padding : 15px;
+    border-radius: 12px;
+    height: 100%;
+    background-color: #00000082;
+ }
+
+.truncate {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 0;
+}
+
+header{
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 10vh;
+}
+
+.header-cnt{
+    height: 10vh;
+    background: url("../images/nav_bar.png");
+    background-size: auto 112%;
+    display: table;
+    padding: 5px 10px;
+}
+
+.header-cnt>span{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.header-cnt>span>img{
+  width: 22px;
+}
+
+.back-btn{
+  text-align: left;
+}
+
+.search-btn{
+  padding-top: 2vh;
+  text-align: right;
+}
+
+.searchBox{
+  width: 50%;
+  .dropdown-menu{
+    width: 48%;
+    max-height: 450%;
+    overflow-y: auto;
+  }
+}
+
+.header-txt{
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.tile-cnt img{
+  width: 100%;
+}
+.padding-5px{
+  padding: 5px;
+}
+
+.scroll-block{
+  min-height: 2500px;
+}
+
+.padding-top-5{
+  padding-top: 5px;
+}
+
+.search-result {
+  overflow: hidden;
+  max-width: 100%;
+
+  .search-result-image{
+    float: left
+  }
+  .search-result-text{
+    float: left;
+    padding-left: 10px;
+    width: 50%;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+/*------------------------------------------- */
+
+.form-container{
+  background: #00000066;
+  border-radius: 10px;
+
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
+  transition-delay: 0.25s;
+}
+.fade.in{
+  opacity: 1;
+}
+
+.animate-switch-container {
+  position:relative;
+  overflow: hidden;
+  height: 500px;
+  border: solid 1px black;
+  box-shadow: 6px 6px 15px gray;
+  padding:10px;
+  border-radius:10px;
+
+  background-size: 50px 50px;
+}
+.animate-switch{
+  padding:10px;
+  width: 100%;
+}
+.animate-switch.ng-animate {
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+  position:absolute;
+
+}
+/* hide leaving slide  */
+/* show */
+.animate-switch.ng-leave{
+  left:0;
+}
+/* hide */
+.forward .animate-switch.ng-leave.ng-leave-active{
+  left:-100%;
+}
+.backward .animate-switch.ng-leave.ng-leave-active{
+  left: 100%;
+}
+/* show entering slide  */
+/* hide */
+.forward .animate-switch.ng-enter {
+  left:100%;
+}
+.backward .animate-switch.ng-enter {
+  left:-100%;
+}
+/* show */
+.animate-switch.ng-enter.ng-enter-active {
+  left:0;
+}
+
+
+/*-----------------------------------*/
+/*------>>> Validation <<<-----------*/
+/*-----------------------------------*/
+
+.form-validation input.ng-invalid-maxlength {
+  border:2px solid #D9272D;
+}
+
+
+.length-error {
+  color: #D9272D;
+  display: block;
+  font-size: 12px;
+  opacity: .8;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  line-height: 18px;
+  padding: 10px 10px 5px 10px;
+  margin: -25px 0 20px 0;
+  background-color: #E3E3E3;
+  border-radius: 0 0 5px 5px;
+}
+
+.input-error {
+  border: 2px solid #D9272D;
+}
+
+/*-----------------------------------*/
+/*------->>> FORM STYLES <<<---------*/
+/*-----------------------------------*/
+
+.note {
+  display: block;
+  font-size: 12px;
+  opacity: .8;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  line-height: 18px;
+}
+
+.note-input {
+  padding: 10px 10px 5px 10px;
+  margin: -25px 0 20px 0;
+  background-color: #E3E3E3;
+  border-radius: 0 0 5px 5px;
+}
+
+.note-input-error, .required-error-banner {
+  background-color: rgba(217, 39, 45, 0.5);
+}
+
+/*-----------------------------------*/
+/*----------->>> HELPERS <<<-------------*/
+/*-----------------------------------*/
+
+/*
+  Allow angular.js to be loaded in body, hiding cloaked elements until
+  templates compile.  The !important is important given that there may be
+  other selectors that are more specific or come later and might alter display.
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}

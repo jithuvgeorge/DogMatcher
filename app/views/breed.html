@@ -1,0 +1,40 @@
+<div class="breed-container">
+	<div class="container-fluid" >
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-11">
+			<h1>{{dog.breed_name}}</h1>
+		</div>
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-4"> 
+			<div class= "col-md-1">
+			</div>
+			<div class= "col-md-10">
+				<image-gallary slides="dog.dogImageInfo"> </image-gallary>
+				<div class= "col-md-12 spacing">
+				</div>
+			</div>
+			<div class= "col-md-12">
+				<breed-characteristics dog = "dog"></breed-characteristics>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class= "col-md-12 spacing">
+			</div>
+			<div class="col-md-12 breed-desc-div">
+				<p>{{dog.dogCharacteristics.description}}</p>
+			</div>	
+			<div class= "col-md-12 spacing">
+			</div>
+			<div class="col-md-12 breed-desc-div" ng-show = "showMap">
+				<ng-map center="29.49, -98.54" zoom="10" mayTypeId="TERRAIN">
+				   	<marker ng-repeat="city in getCities(dog.id)" no-watcher="true" position={{city.position}} title={{city.title}}></marker>
+				</ng-map>
+			</div>
+		</div>
+		<div class="col-md-1">
+		</div>
+		
+	</div>
+<div/>

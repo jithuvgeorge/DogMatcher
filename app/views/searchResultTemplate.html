@@ -1,0 +1,7 @@
+<a class="search-result">
+  <img class="search-result-image" ng-src="{{match.model.dogImageInfo[0].image_url}}"  err-src="images/placeholder_for_missing_posters.png" width="50">
+  <div class="search-result-text">
+  	<span ng-bind-html="match.model.breed_name | uibTypeaheadHighlight:query"></span>
+
+  </div>
+</a>
